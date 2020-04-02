@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".homeActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        >
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/covid_19"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_weight="8"
+        android:padding="8dp"
+        app:alignmentMode="alignMargins"
+        app:columnCount="2"
+        app:columnOrderPreserved="false"
+        app:rowCount="3">
+
+        <!-- row 1 col 1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dashBoard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivConfirmed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/dashboard" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- row 1 col 2-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/stateConfirmedCases"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/ivHospitalised"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/stateconfirmedcases" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- row 2 col 1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/testCentresIndia"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/ivRecovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/testcentresinindia" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- row 2 col 2-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/symptoms"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivDeceased"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/symptoms" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- row 3 col 1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/preventionPractices"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/prevention" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- row 3 col 2-->
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/about"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/about" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>

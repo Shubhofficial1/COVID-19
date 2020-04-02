@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context=".dashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            >
+
+            <TextView
+                android:id="@+id/tvHead0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:text="@string/dashboard_of_the_covid_19_outbreak_in_india"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/dashboardGrid"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_weight="8"
+            android:padding="8dp"
+            app:alignmentMode="alignMargins"
+            app:columnCount="1"
+            app:columnOrderPreserved="false"
+            app:rowCount="4">
+
+            <!-- row 1 col 1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/confirmedCases"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvConfirmed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/confirmed_cases"
+                    android:textColor="#696969"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCountConfirmed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Loading..."
+                    android:textColor="#fb7b6b"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/confirmedgraph" />
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- row 2 col 1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hospitalisedCases"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvhospitalised"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/hospitalised_cases"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCountHospitalised"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="Loading..."
+                        android:textColor="#ff1e56"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/hospitalisedgraph" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- row 3 col 1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recoveredCases"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvRecovered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/recovered_cases"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCountRecovered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="Loading..."
+                        android:textColor="#91bd3a"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/recoveredgraph" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- row 4 col 1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deathCases"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDeceased"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/deceased_cases"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCountDeceased"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:text="Loading..."
+                        android:textColor="#12cad6"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/deceasedgraph" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </LinearLayout>
+</ScrollView>

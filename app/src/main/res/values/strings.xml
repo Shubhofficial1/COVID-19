@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Covid19</string>
+    <string name="covid_19">COVID-19</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="state_confirmed_cases">State Confirmed Cases</string>
+    <string name="test_centres_in_india">Test Centres In India</string>
+    <string name="symptoms_of_covid_19">Symptoms of Covid-19</string>
+    <string name="prevention_practices">Prevention Practices</string>
+    <string name="about">About</string>
+    <string name="dashboard_of_the_covid_19_outbreak_in_india">Dashboard of the COVID-19 Outbreak in India</string>
+    <string name="deceased_cases">DECEASED CASES</string>
+    <string name="recovered_cases">RECOVERED CASES</string>
+    <string name="hospitalised_cases">HOSPITALISED CASES</string>
+    <string name="confirmed_cases">CONFIRMED CASES</string>
+    <string name="government_of_india_is_taking_all_necessary_steps_to_ensure_that_we_are_prepared_well_to_face_the_challenge_and_threat_posed_by_the_growing_pandemic_of_covid_19_the_corona_virus_with_active_support_of_thepeople_of_india_we_have_been_able_to_contain_the_spread_of_the_virus_in_our_country_the_most_important_factor_in_preventing_the_spread_of_the_virus_locally_is_to_empower_the_citizens_with_the_right_information_and_taking_precautions_as_per_the_advisories_being_issued_by_ministry_of_health_and_family_welfare_n_this_app_is_developed_for_providing_realtime_insights_about_the_spread_of_covid_19_in_india_nbe_a_part_of_the_mission_against_coronavirus">Government of India is taking all necessary steps to ensure that we are prepared well to face the challenge and threat posed by the growing pandemic of COVID 19 – the Corona Virus. With active support of thepeople of India, we have been able to contain the spread of the Virus in our country.The most important factor in preventing the spread of the Virus locally is to empower the citizens with the right information and taking precautions as per the advisories being issued by Ministry of Health and Family Welfare.\n This app is developed for providing realtime insights about the spread of Covid-19 in India.\nBe a part of the mission against Coronavirus!</string>
+</resources>
