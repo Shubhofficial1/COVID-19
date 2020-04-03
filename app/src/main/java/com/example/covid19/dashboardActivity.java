@@ -49,7 +49,7 @@ public class dashboardActivity extends AppCompatActivity implements ValueEventLi
 
     private void setSingleEvent(final androidx.gridlayout.widget.GridLayout dashboardGrid) {
         for (int i = 0; i < dashboardGrid.getChildCount(); i++) {
-            CardView cardView = (CardView) dashboardGrid.getChildAt(i);
+            final CardView cardView = (CardView) dashboardGrid.getChildAt(i);
             final int finalI = i;
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
