@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -14,6 +16,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+
 
 public class dashboardActivity extends AppCompatActivity implements ValueEventListener {
     TextView tvHead0;
@@ -74,10 +78,12 @@ public class dashboardActivity extends AppCompatActivity implements ValueEventLi
 
     @Override
     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
         if (dataSnapshot.getValue(String.class) != null) {
             String key = dataSnapshot.getKey();
             if (key.equals("countConfirmed")) {
                 String heading1 = dataSnapshot.getValue(String.class);
+
                 tvCountConfirmed.setText(heading1);
             } else if (key.equals("countHospitalised")) {
                 String heading2 = dataSnapshot.getValue(String.class);
@@ -104,6 +110,7 @@ public class dashboardActivity extends AppCompatActivity implements ValueEventLi
         mCountHospitalised.addValueEventListener(this);
         mCountRecovered.addValueEventListener(this);
         mCountDeceased.addValueEventListener(this);
+
 
     }
 
