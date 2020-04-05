@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".testCentreInIndiaActivity">
 
-    <TextView
-        android:id="@+id/tvHead2"
+    <ExpandableListView
+        android:id="@+id/lvExp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome to test centre sin india activity" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"></ExpandableListView>
 </LinearLayout>

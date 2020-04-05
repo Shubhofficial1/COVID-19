@@ -44,37 +44,37 @@ public class dashboardActivity extends AppCompatActivity implements ValueEventLi
         tvCountHospitalised = findViewById(R.id.tvCountHospitalised);
         tvCountRecovered = findViewById(R.id.tvCountRecovered);
         tvCountDeceased = findViewById(R.id.tvCountDeceased);
-        setSingleEvent(dashboardGrid);
+//        setSingleEvent(dashboardGrid);
     }
 
-    private void setSingleEvent(final androidx.gridlayout.widget.GridLayout dashboardGrid) {
-        for (int i = 0; i < dashboardGrid.getChildCount(); i++) {
-            final CardView cardView = (CardView) dashboardGrid.getChildAt(i);
-            final int finalI = i;
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (finalI == 0) {
-//                        for confirmed cases
-                        Intent intent = new Intent(dashboardActivity.this, confirmedActivity.class);
-                        startActivity(intent);
-                    } else if (finalI == 1) {
-//                        for  hospitalised cases
-                        Intent intent = new Intent(dashboardActivity.this, hospitalisedActivity.class);
-                        startActivity(intent);
-                    } else if (finalI == 2) {
-//                        for recovered cases
-                        Intent intent = new Intent(dashboardActivity.this, recoveredActivity.class);
-                        startActivity(intent);
-                    } else if (finalI == 3) {
-//                        for deceased cases
-                        Intent intent = new Intent(dashboardActivity.this, deceasedActivity.class);
-                        startActivity(intent);
-                    }
-                }
-            });
-        }
-    }
+//    private void setSingleEvent(final androidx.gridlayout.widget.GridLayout dashboardGrid) {
+//        for (int i = 0; i < dashboardGrid.getChildCount(); i++) {
+//            final CardView cardView = (CardView) dashboardGrid.getChildAt(i);
+//            final int finalI = i;
+//            cardView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    if (finalI == 0) {
+////                        for confirmed cases
+//                        Intent intent = new Intent(dashboardActivity.this, confirmedActivity.class);
+//                        startActivity(intent);
+//                    } else if (finalI == 1) {
+////                        for  hospitalised cases
+//                        Intent intent = new Intent(dashboardActivity.this, hospitalisedActivity.class);
+//                        startActivity(intent);
+//                    } else if (finalI == 2) {
+////                        for recovered cases
+//                        Intent intent = new Intent(dashboardActivity.this, recoveredActivity.class);
+//                        startActivity(intent);
+//                    } else if (finalI == 3) {
+////                        for deceased cases
+//                        Intent intent = new Intent(dashboardActivity.this, deceasedActivity.class);
+//                        startActivity(intent);
+//                    }
+//                }
+//            });
+//        }
+//    }
 
     @Override
     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -83,7 +83,6 @@ public class dashboardActivity extends AppCompatActivity implements ValueEventLi
             String key = dataSnapshot.getKey();
             if (key.equals("countConfirmed")) {
                 String heading1 = dataSnapshot.getValue(String.class);
-
                 tvCountConfirmed.setText(heading1);
             } else if (key.equals("countHospitalised")) {
                 String heading2 = dataSnapshot.getValue(String.class);
