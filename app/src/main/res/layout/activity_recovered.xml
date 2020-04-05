@@ -4,12 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
-    tools:context=".recoveredActivity">
+    tools:context=".recoveredActivity" >
 
     <TextView
-        android:id="@+id/tvRecovered"
+        android:id="@+id/textView21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="These are the numbers of recovered cases" />
+        android:layout_marginTop="300dp"
+        android:gravity="center_horizontal"
+        android:text="For Future Development"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 </LinearLayout>

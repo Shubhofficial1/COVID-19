@@ -248,19 +248,6 @@ public class testCentreInIndiaActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         listHash.put(listDataHeader.get(0),AndhraPradesh);
         listHash.put(listDataHeader.get(1),Assam);
         listHash.put(listDataHeader.get(2),Bihar);
